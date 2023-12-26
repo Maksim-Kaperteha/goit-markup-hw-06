@@ -266,6 +266,7 @@ a {
   top: 50%;
   left: 50%;
   width: 528px;
+
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.0);
   transition: transform var(--animation-time--);
@@ -290,14 +291,15 @@ a {
   transition: fill var(--animation-time--);
 }
 
-.modal-btn .icons-modal:hover,
-.modal-btn .icons-modal:focus {
+.modal-btn:hover .icons-modal,
+.modal-btn:focus .icons-modal {
   fill: var(--blue-cl--);
 }
 
 .icons-modal {
   width: 100%;
   height: 100%;
+
   fill: var(--black-cl--);
   transition: fill var(--animation-time--);
 }
@@ -315,13 +317,14 @@ a {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.6px;
+  padding-bottom: 12px;
 }
 
 .form-field {
   position: relative;
-  margin-bottom: 28px;
-
+  margin-bottom: 10px;
 }
+
 
 .modal-form-label {
   display: block;
@@ -342,6 +345,7 @@ a {
   border: 1px solid rgba(33, 33, 33, 0.20);
   cursor: pointer;
   transition: border-color var(--animation-time--);
+  margin-bottom: 10px;
 }
 
 
@@ -380,6 +384,10 @@ a {
   border: 1px solid rgba(33, 33, 33, 0.20);
 }
 
+.modal-form-text:focus {
+  outline: 0;
+}
+
 .modal-form-text:placeholder-shown {
   color: rgba(117, 117, 117, 0.50);
   font-size: 12px;
@@ -393,6 +401,7 @@ a {
   display: flex;
   align-items: baseline;
   position: relative;
+  margin: 0;
 }
 
 .checkbox {
@@ -407,6 +416,10 @@ a {
 
 .checkbox:focus+.icon-checkbox {
   outline: solid 1px;
+}
+
+.checkbox:checked:focus+.icon-checkbox {
+  outline: solid 1px var(--blue-cl--);
 }
 
 .icon-checkbox {
@@ -457,6 +470,8 @@ a {
   width: 200px;
   height: 50px;
   margin-top: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
@@ -736,8 +751,9 @@ a {
 /* Footer */
 .container.footer-socials {
   display: flex;
-  align-items: center;
+
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .footer {
@@ -907,11 +923,13 @@ a {
   position: relative;
   width: 200px;
   height: 50px;
+  margin-left: 20px;
 }
 
 .btn-subscription {
   width: 100%;
   height: 100%;
+  margin-right: 0;
   border-radius: 4px;
   background: #2196F3;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
